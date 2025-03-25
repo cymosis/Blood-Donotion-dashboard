@@ -33,7 +33,7 @@ def load_model_and_preprocessors():
 def load_data():
     try:
         # Load data from CSV
-        df = pd.read_csv('sampletest_data.csv')
+        df = pd.read_csv('https://donate.intouchsystems.co.ke/sampletest_data.csv')
         
         # Display column names for debugging
         print("Available columns:", df.columns.tolist())
@@ -172,8 +172,8 @@ def main():
         st.title("Blood Donation Analytics Dashboard")
         
         # Display available columns
-        st.sidebar.subheader("Available Data Columns")
-        st.sidebar.write(df.columns.tolist())
+        # st.sidebar.subheader("Available Data Columns")
+        # st.sidebar.write(df.columns.tolist())
         
         # Filters in the sidebar
         st.sidebar.subheader("Filter Data")
