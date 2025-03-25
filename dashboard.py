@@ -15,7 +15,7 @@ st.set_page_config(
 )
 
 # Load the trained model and preprocessors
-@st.cache_resource
+@st.cache
 def load_model_and_preprocessors():
     try:
         model = joblib.load('blood_donation_model.pkl')
@@ -29,7 +29,7 @@ def load_model_and_preprocessors():
         return None, None, None, None
 
 # Function to load dataset
-@st.cache_data
+@st.cache
 def load_data():
     try:
         # Load data from CSV
