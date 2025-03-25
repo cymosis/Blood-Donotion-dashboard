@@ -18,10 +18,10 @@ st.set_page_config(
 @st.cache
 def load_model_and_preprocessors():
     try:
-        model = joblib.load('blood_donation_model.pkl')
-        scaler = joblib.load('scaler.pkl')
-        label_encoders = joblib.load('label_encoders.pkl')
-        used_features = joblib.load('used_features.pkl')
+        model = joblib.load('/home/intouchs/Donate/blood_donation_model.pkl')
+        scaler = joblib.load('/home/intouchs/Donate/scaler.pkl')
+        label_encoders = joblib.load('/home/intouchs/Donate/label_encoders.pkl')
+        used_features = joblib.load('/home/intouchs/Donate/used_features.pkl')
         return model, scaler, label_encoders, used_features
     except FileNotFoundError:
         st.error("Model files not found. Please make sure you have trained the model and saved the required files.")
@@ -33,7 +33,7 @@ def load_model_and_preprocessors():
 def load_data():
     try:
         # Load data from CSV
-        df = pd.read_csv('https://donate.intouchsystems.co.ke/sampletest_data.csv')
+        df = pd.read_csv('/home/intouchs/Donate/sampletest_data.csv')
         
         # Display column names for debugging
         print("Available columns:", df.columns.tolist())
