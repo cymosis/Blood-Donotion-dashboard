@@ -5,10 +5,10 @@ from sklearn.preprocessing import LabelEncoder
 app = Flask(__name__)
 
 # Load trained model, scaler, label encoders, and used features
-model = joblib.load('/home/intouchs/Donate/blood_donation_model.pkl')
-scaler = joblib.load('/home/intouchs/Donate/scaler.pkl')
-label_encoders = joblib.load('/home/intouchs/Donate/label_encoders.pkl')
-used_features = joblib.load('/home/intouchs/Donate/used_features.pkl')  # Load the saved list of used features
+model = joblib.load('blood_donation_model.pkl')
+scaler = joblib.load('scaler.pkl')
+label_encoders = joblib.load('label_encoders.pkl')
+used_features = joblib.load('used_features.pkl')  # Load the saved list of used features
 
 @app.route('/predict', methods=['POST'])
 def predict():
